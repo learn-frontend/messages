@@ -1,0 +1,45 @@
+$border-color: #BDBDBD;
+$primary-color: #2D9CDB;
+$nav-height: 64px;
+
+nav {
+  background-color: $primary-color;
+}
+
+.preview {
+  border-right: 1px solid $border-color;
+  max-height: calc(100vh - #{$nav-height});
+  overflow: auto;
+  &-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      border-bottom: 1px dashed $border-color;
+    }
+    &-item {
+      color: #000;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: block;
+      &.active {
+        background: fade-out($primary-color, 0.8);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.message {
+  padding: 20px 8px;
+  max-height: calc(100vh - #{$nav-height});
+  overflow: auto;
+  &-head {
+    border-bottom: 1px dashed $border-color;
+  }
+  &-body {
+    padding-top: 20px;
+    white-space: pre-line;
+  }
+}
